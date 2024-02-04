@@ -1,0 +1,68 @@
+{
+  "name": "kittl-dev-kit",
+  "displayName": "Kittl developers kit",
+  "description": "Creates file structure for react project",
+  "version": "2.0.0",
+  "license": "(ISC OR GPL-3.0)",
+  "publisher": "DenisBratchikov",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "file structure",
+    "kittl"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createComponent",
+        "title": "Create component"
+      },
+      {
+        "command": "extension.createLibComponent",
+        "title": "Create UI lib component"
+      },
+      {
+        "command": "extension.createStore",
+        "title": "Create store"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.createComponent",
+          "group": "Kittl_extension@1",
+          "when": "resourceExtname == ''"
+        },
+        {
+          "command": "extension.createLibComponent",
+          "group": "Kittl_extension@1",
+          "when": "resourceExtname == ''"
+        },
+        {
+          "command": "extension.createStore",
+          "group": "Kittl_extension@1",
+          "when": "resourceExtname == ''"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "tslint -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.60",
+    "@types/vscode": "^1.34.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.9.10"
+  }
+}
