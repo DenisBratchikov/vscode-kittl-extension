@@ -5,6 +5,10 @@
   "version": "2.0.0",
   "license": "(ISC OR GPL-3.0)",
   "publisher": "DenisBratchikov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DenisBratchikov/vscode-kittl-extension"
+  },
   "engines": {
     "vscode": "^1.34.0"
   },
@@ -16,6 +20,11 @@
     "typescript",
     "file structure",
     "kittl"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createComponent",
+    "onCommand:extension.createLibComponent",
+    "onCommand:extension.createStore"
   ],
   "main": "./out/extension.js",
   "contributes": {
